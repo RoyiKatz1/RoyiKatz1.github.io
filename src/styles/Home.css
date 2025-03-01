@@ -27,10 +27,19 @@
 	display: flex;
 	width: 100%;
 	justify-content: center;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		scale: 0.5;
+	}
 }
 
 .case-studies {
 	display: flex;
 	width: 100%;
 	gap: 32px;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
 }
