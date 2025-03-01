@@ -39,15 +39,5 @@
 }
 
 .collapsible-content.open {
-	max-height: 1000px; /* Large enough to fit content */
 	opacity: 1;
-}
-
-/* Only apply collapsibility on mobile */
-@media (max-width: 768px) {
-	.collapsible-content {
-		transition:
-			max-height 0.3s ease-out,
-			opacity 0.2s ease-in-out;
-	}
 }
