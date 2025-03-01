@@ -18,6 +18,14 @@
 	flex-direction: column;
 	gap: 32px;
 
+	h1 {
+		font-size: 72px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
 	button {
 		align-self: center;
 	}
@@ -36,6 +44,7 @@
 
 .case-studies {
 	display: flex;
+	flex-direction: row;
 	width: 100%;
 	gap: 32px;
 

@@ -1,0 +1,16 @@
+.insight-box {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--primary-purple);
+	background-color: var(--primary-hover);
+	border-radius: 16px;
+	padding: 8px;
+
+	h2 {
+		font-size: 40px;
+	}
+
+	p {
+		font-style: italic;
+	}
+}

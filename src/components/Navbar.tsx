@@ -13,6 +13,7 @@ const Navbar = () => {
 	const mailTo = `mailto:royicats@gmail.com?subject=${emailSubject}!&body=${emailBody}`;
 	return (
 		<nav className="navbar">
+			<a href="/">Home</a>
 			<a
 				className="icon-link"
 				href="/royi-katz-cv.pdf"

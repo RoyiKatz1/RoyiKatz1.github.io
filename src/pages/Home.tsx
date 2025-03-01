@@ -1,5 +1,4 @@
 import "../styles/Home.css";
-import Navbar from "../components/Navbar";
 import VennDiagram from "../components/VennDiagram/VennDiagram";
 import CaseStudyCard from "../components/CaseStudyCard";
 
@@ -11,11 +10,10 @@ const Home = () => {
 
 	return (
 		<div className="container">
-			{<Navbar />}
 			<header className="hero">
 				<div className="hero-text">
 					<div>
-						<h3>Hi!</h3>
+						<h2>Hi!</h2>
 						<h1>
 							I’m <span className="highlight">Royi</span>
 						</h1>
@@ -35,7 +33,7 @@ const Home = () => {
 				</div>
 			</header>
 
-			<h3>Case Studies</h3>
+			<h2>Case Studies</h2>
 
 			<section className="case-studies" id="case-studies">
 				<CaseStudyCard
@@ -43,7 +41,7 @@ const Home = () => {
 					logo="src\assets\logos\logo-w4m.svg"
 					title="Improving Engagement Through UX"
 					description="Redesigning the job application flow led to a 70% questionnaire completion rate by removing friction points and improving match visibility."
-					link="/case-study-1"
+					link="/case-study/worksforme-onboarding"
 					tags={["UX Design", "Product Strategy"]}
 				/>
 				<CaseStudyCard
@@ -51,7 +49,7 @@ const Home = () => {
 					logo="src\assets\logos\logo-w4m.svg"
 					title="Smarter Hiring Decisions with Data-Driven Matching"
 					description="We replaced rigid, suggestion-based matching with a flexible, interactive system that lets recruiters adjust job criteria in real-time—improving match accuracy and efficiency."
-					link="/case-study-2"
+					link="/case-study/worksforme-recruiter"
 					tags={["UX Design", "Product Strategy"]}
 				/>
 			</section>

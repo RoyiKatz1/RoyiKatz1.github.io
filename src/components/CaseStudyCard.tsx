@@ -15,6 +15,7 @@ const CaseStudyCard = ({
 	description,
 	logo = "",
 	image,
+	link,
 	tags,
 }: CaseStudyProps) => {
 	return (
@@ -44,7 +45,9 @@ const CaseStudyCard = ({
 					></img>
 				</div>
 			</div>
-			<button>Read Case Study</button>
+			<a href={link}>
+				<button>Read Case Study</button>
+			</a>
 		</div>
 	);
 };
