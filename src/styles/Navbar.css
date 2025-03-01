@@ -30,6 +30,7 @@ a {
 	flex-direction: column;
 	min-width: 150px;
 	padding: 5px 0;
+	border-radius: 4px;
 }
 
 .dropdown-menu a {
