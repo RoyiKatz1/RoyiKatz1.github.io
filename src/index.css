@@ -10,11 +10,12 @@ body {
 	font-family: "Inter", sans-serif;
 	background-color: #fafafa;
 	color: #222;
-	padding: 64px 128px;
+	/* Responsive padding using clamp */
+	padding: clamp(32px, 5vw, 128px);
 
-	@media screen and (max-width: 768px) {
-		padding: 32px;
-	}
+	/* Set max width for better readability */
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 /* Default link styles */

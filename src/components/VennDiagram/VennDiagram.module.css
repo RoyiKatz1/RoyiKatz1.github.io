@@ -3,6 +3,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 80vw; /* Adapt to screen width */
+	max-width: 600px;
+	height: auto;
+	aspect-ratio: 1.75 / 1.375; /* Maintain shape */
 }
 
 .circle {
@@ -14,6 +18,8 @@
 	font-weight: bold;
 	color: #222;
 	text-align: center;
+	width: clamp(20vw, 30vw, 200px);
+	height: clamp(20vw, 30vw, 200px);
 }
 
 .circleBottom {
@@ -28,6 +34,19 @@
 }
 
 .label {
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 2.5vw, 1.5rem);
 	font-weight: lighter;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.vennContainer {
+		width: 90vw;
+		max-width: none;
+	}
+	.circle {
+		width: clamp(25vw, 35vw, 150px);
+		height: clamp(25vw, 35vw, 150px);
+		font-size: clamp(0.8rem, 2vw, 1.2rem);
+	}
 }
