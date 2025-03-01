@@ -1,6 +1,6 @@
 import CaseStudyHeader from "../components/caseStudy/CaseStudyHeader";
 import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
-
+import CollapsibleSection from "../components/collapsibleSection";
 const CaseStudyPage = () => {
 	return (
 		<div className="case-study-page">
@@ -58,38 +58,57 @@ const CaseStudyPage = () => {
 								</li>
 							</ol>
 						</div>
-						<div className="section-paragraph">
-							<h3>Before (Problem Flow)</h3>
-							<img
-								src="../src/assets/images/w4m-onboarding/flow-before.png"
-								alt="WorksForMe Old Onboarding Flow"
-							/>
-						</div>
-						<div className="section-paragraph">
-							<h3>Solution</h3>
-							<img
-								id="add-margin"
-								src="../src/assets/images/w4m-onboarding/flow-after.png"
-								alt="WorksForMe New Onboarding Flow"
-							/>
-							<ul>
-								<li>
-									<span id="red">
-										Removed the extra login step →{" "}
-									</span>
-									Enabled auto-login from the verification
-									email, making the process seamless.
-								</li>
-								<li>
-									<span id="green">
-										Introduced a dedicated landing page
-										before the registration step →{" "}
-									</span>
-									Educated users on why they should sign up,
-									building trust and increasing conversions.
-								</li>
-							</ul>
-						</div>
+						<CollapsibleSection title="Before (Problem Flow)">
+							<div className="diagram">
+								<img
+									className="desktop-only"
+									src="../src/assets/images/w4m-onboarding/flow-before.png"
+									alt="WorksForMe Old Onboarding Flow"
+								/>
+								<img
+									className="mobile-only"
+									src="../src/assets/images/w4m-onboarding/flow-before-mobile.png"
+									alt="WorksForMe Old Onboarding Flow"
+								/>
+							</div>
+						</CollapsibleSection>
+						<CollapsibleSection title="Solution">
+							<div className="section-paragraph">
+								<div className="diagram">
+									<img
+										className="desktop-only"
+										id="add-margin"
+										src="../src/assets/images/w4m-onboarding/flow-after.png"
+										alt="WorksForMe New Onboarding Flow"
+									/>
+									<img
+										className="mobile-only"
+										id="add-margin"
+										src="../src/assets/images/w4m-onboarding/flow-after-mobile.png"
+										alt="WorksForMe New Onboarding Flow"
+									/>
+								</div>
+								<ul>
+									<li>
+										<span id="red">
+											Removed the extra login step →{" "}
+										</span>
+										Enabled auto-login from the verification
+										email, making the process seamless.
+									</li>
+									<li>
+										<span id="green">
+											Introduced a dedicated landing page
+											before the registration step →{" "}
+										</span>
+										Educated users on why they should sign
+										up, building trust and increasing
+										conversions.
+									</li>
+								</ul>
+							</div>
+						</CollapsibleSection>
+
 						<div className="section-paragraph">
 							<h3>Impact</h3>
 							<ul className="checkmark">

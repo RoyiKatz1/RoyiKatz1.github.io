@@ -11,6 +11,10 @@ body {
 	background-color: #fafafa;
 	color: #222;
 	padding: 64px 128px;
+
+	@media screen and (max-width: 768px) {
+		padding: 32px;
+	}
 }
 
 /* Default link styles */
