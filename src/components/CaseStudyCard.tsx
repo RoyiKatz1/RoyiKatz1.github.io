@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "../styles/CaseStudyCard.css";
+import Tag from "./caseStudy/Tag/Tag";
 
 interface CaseStudyProps {
 	title: string;
@@ -7,14 +7,15 @@ interface CaseStudyProps {
 	link: string;
 	logo?: string;
 	image: string;
+	tags: string[];
 }
 
 const CaseStudyCard = ({
 	title,
 	description,
-	link,
 	logo = "",
 	image,
+	tags,
 }: CaseStudyProps) => {
 	return (
 		<div className="case-study-card-wrapper">
@@ -29,9 +30,11 @@ const CaseStudyCard = ({
 					)}
 					<h3>{title}</h3>
 					<p>{description}</p>
-					{/* <Link to={link} className="read-more">
-				Read Case Study
-			</Link> */}
+					<div className="tags">
+						{tags.map((tag) => (
+							<Tag text={tag} />
+						))}
+					</div>
 				</div>
 				<div className="image-wrapper">
 					<img

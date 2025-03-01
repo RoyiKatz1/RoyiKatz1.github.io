@@ -1,0 +1,7 @@
+.tag {
+	background-color: var(--w4m-blue);
+	padding: 4px 8px;
+	border-radius: 64px;
+	color: white;
+	font-size: 12px;
+}
