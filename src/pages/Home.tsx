@@ -1,14 +1,21 @@
 import "../styles/Home.css";
 import VennDiagram from "../components/VennDiagram/VennDiagram";
 import CaseStudyCard from "../components/CaseStudyCard";
-import onboardingPreview from "../assets/images/previewCards/onboarding-preview.png";
-import optimizationPreview from "../assets/images/previewCards/optimization-preview.png";
 
 const Home = () => {
 	const handleScroll = (id: string) => {
 		const target = document.getElementById(id);
 		target?.scrollIntoView({ behavior: "smooth" });
 	};
+
+	const onboardingPreview = new URL(
+		"../assets/images/previewCards/onboarding-preview.png",
+		import.meta.url
+	).href;
+	const optimizationPreview = new URL(
+		"../assets/images/previewCards/optimization-preview.png",
+		import.meta.url
+	).href;
 
 	return (
 		<div className="container">
