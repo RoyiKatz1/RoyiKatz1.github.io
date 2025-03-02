@@ -1,6 +1,6 @@
 import CaseStudyHeader from "../components/caseStudy/CaseStudyHeader";
 import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
-import CollapsibleSection from "../components/collapsibleSection";
+import CollapsibleSection from "../components/CollapsibleSection";
 
 const CaseStudyPage = () => {
 	return (
