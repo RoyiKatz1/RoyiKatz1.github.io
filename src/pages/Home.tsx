@@ -17,6 +17,9 @@ const Home = () => {
 		import.meta.url
 	).href;
 
+	const logoW4M = new URL("../assets/logos/logo-w4m.svg", import.meta.url)
+		.href;
+
 	return (
 		<div className="container">
 			<header className="hero">
@@ -47,7 +50,7 @@ const Home = () => {
 			<section className="case-studies" id="case-studies">
 				<CaseStudyCard
 					image={onboardingPreview}
-					logo="src\assets\logos\logo-w4m.svg"
+					logo={logoW4M}
 					title="Improving Engagement Through UX"
 					description="WorksForMe simplifies job applications by automatically matching candidates to roles. By improving the application flow, we increased completion rates to 70%—reducing friction and keeping candidates engaged."
 					link="/case-study/worksforme-onboarding"
@@ -55,7 +58,7 @@ const Home = () => {
 				/>
 				<CaseStudyCard
 					image={optimizationPreview}
-					logo="src\assets\logos\logo-w4m.svg"
+					logo={logoW4M}
 					title="Smarter Hiring Decisions with Data-Driven Matching"
 					description="WorksForMe helps recruiters quickly find the right candidates by automating job matching. We built a dynamic system that lets recruiters adjust hiring criteria in real-time—ensuring better matches with less effort."
 					link="/case-study/worksforme-recruiter"
