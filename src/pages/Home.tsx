@@ -1,6 +1,8 @@
 import "../styles/Home.css";
 import VennDiagram from "../components/VennDiagram/VennDiagram";
 import CaseStudyCard from "../components/CaseStudyCard";
+import onboardingPreview from "../assets/images/previewCards/onboarding-preview.png";
+import optimizationPreview from "../assets/images/previewCards/optimization-preview.png";
 
 const Home = () => {
 	const handleScroll = (id: string) => {
@@ -37,7 +39,7 @@ const Home = () => {
 
 			<section className="case-studies" id="case-studies">
 				<CaseStudyCard
-					image="src\assets\images\previewCards\onboarding-preview.png"
+					image={onboardingPreview}
 					logo="src\assets\logos\logo-w4m.svg"
 					title="Improving Engagement Through UX"
 					description="WorksForMe simplifies job applications by automatically matching candidates to roles. By improving the application flow, we increased completion rates to 70%—reducing friction and keeping candidates engaged."
@@ -45,7 +47,7 @@ const Home = () => {
 					tags={["UX Design", "Product Strategy"]}
 				/>
 				<CaseStudyCard
-					image="src\assets\images\previewCards\optimization-preview.png"
+					image={optimizationPreview}
 					logo="src\assets\logos\logo-w4m.svg"
 					title="Smarter Hiring Decisions with Data-Driven Matching"
 					description="WorksForMe helps recruiters quickly find the right candidates by automating job matching. We built a dynamic system that lets recruiters adjust hiring criteria in real-time—ensuring better matches with less effort."
