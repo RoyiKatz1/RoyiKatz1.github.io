@@ -2,11 +2,29 @@ import CaseStudyHeader from "../components/caseStudy/CaseStudyHeader";
 import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
 
 const CaseStudyPage = () => {
+	const logoW4M = new URL("../assets/logos/logo-w4m.svg", import.meta.url)
+		.href;
+
+	const optimizationOld = new URL(
+		"../assets/images/w4m-recruiter/optimization-old.png",
+		import.meta.url
+	).href;
+
+	const optimizationNew = new URL(
+		"../assets/images/w4m-recruiter/optimization-new.png",
+		import.meta.url
+	).href;
+
+	const selectCriteria = new URL(
+		"../assets/images/w4m-recruiter/select-criteria.png",
+		import.meta.url
+	).href;
+
 	return (
 		<div className="case-study-page">
 			<CaseStudyHeader
 				title="Smarter Hiring Decisions with Data-Driven Matching"
-				logo="../src/assets/logos/logo-w4m.svg"
+				logo={logoW4M}
 				tags={["UX Design", "Product Strategy"]}
 			/>
 			<p>
@@ -128,7 +146,7 @@ const CaseStudyPage = () => {
 					<div className="section-image">
 						<img
 							className="screenshot"
-							src="../src/assets/images/w4m-recruiter/optimization-old.png"
+							src={optimizationOld}
 							alt="WorksForMe Landing Page"
 						/>
 					</div>
@@ -154,7 +172,7 @@ const CaseStudyPage = () => {
 							<div className="section-image">
 								<img
 									className="screenshot"
-									src="../src/assets/images/w4m-recruiter/select-criteria.png"
+									src={selectCriteria}
 									alt="WorksForMe New Optimization Module"
 								/>
 							</div>
@@ -208,7 +226,7 @@ const CaseStudyPage = () => {
 							<div className="section-image">
 								<img
 									className="screenshot"
-									src="../src/assets/images/w4m-recruiter/optimization-new.png"
+									src={optimizationNew}
 									alt="New Design of WorksForMe Optimization Module"
 								/>
 							</div>

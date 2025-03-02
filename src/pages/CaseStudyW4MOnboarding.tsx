@@ -3,11 +3,49 @@ import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
 import CollapsibleSection from "../components/CollapsibleSection";
 
 const CaseStudyPage = () => {
+	const logoW4M = new URL("../assets/logos/logo-w4m.svg", import.meta.url)
+		.href;
+
+	const flowBefore = new URL(
+		"../assets/images/w4m-onboarding/flow-before.png",
+		import.meta.url
+	).href;
+
+	const flowBeforeMobile = new URL(
+		"../assets/images/w4m-onboarding/flow-before-mobile.png",
+		import.meta.url
+	).href;
+
+	const flowAfter = new URL(
+		"../assets/images/w4m-onboarding/flow-after.png",
+		import.meta.url
+	).href;
+
+	const flowAfterMobile = new URL(
+		"../assets/images/w4m-onboarding/flow-after-mobile.png",
+		import.meta.url
+	).href;
+
+	const landingPage = new URL(
+		"../assets/images/w4m-onboarding/landing-page.png",
+		import.meta.url
+	).href;
+
+	const questionnaire = new URL(
+		"../assets/images/w4m-onboarding/questionnaire.png",
+		import.meta.url
+	).href;
+
+	const matches = new URL(
+		"../assets/images/w4m-onboarding/matches.png",
+		import.meta.url
+	).href;
+
 	return (
 		<div className="case-study-page">
 			<CaseStudyHeader
 				title="Improving Engagement Through UX"
-				logo="../src/assets/logos/logo-w4m.svg"
+				logo={logoW4M}
 				tags={["UX Design", "Product Strategy"]}
 			/>
 			<p>
@@ -63,12 +101,12 @@ const CaseStudyPage = () => {
 							<div className="diagram">
 								<img
 									className="desktop-only"
-									src="../src/assets/images/w4m-onboarding/flow-before.png"
+									src={flowBefore}
 									alt="WorksForMe Old Onboarding Flow"
 								/>
 								<img
 									className="mobile-only"
-									src="../src/assets/images/w4m-onboarding/flow-before-mobile.png"
+									src={flowBeforeMobile}
 									alt="WorksForMe Old Onboarding Flow"
 								/>
 							</div>
@@ -79,13 +117,13 @@ const CaseStudyPage = () => {
 									<img
 										className="desktop-only"
 										id="add-margin"
-										src="../src/assets/images/w4m-onboarding/flow-after.png"
+										src={flowAfter}
 										alt="WorksForMe New Onboarding Flow"
 									/>
 									<img
 										className="mobile-only"
 										id="add-margin"
-										src="../src/assets/images/w4m-onboarding/flow-after-mobile.png"
+										src={flowAfterMobile}
 										alt="WorksForMe New Onboarding Flow"
 									/>
 								</div>
@@ -133,10 +171,7 @@ const CaseStudyPage = () => {
 						</div>
 					</div>
 					<div className="section-image">
-						<img
-							src="../src/assets/images/w4m-onboarding/landing-page.png"
-							alt="WorksForMe Landing Page"
-						/>
+						<img src={landingPage} alt="WorksForMe Landing Page" />
 					</div>
 				</div>
 				<InsightBox text="By removing friction and addressing user trust upfront, we boosted conversions and set the stage for higher engagement throughout the platform." />
@@ -289,13 +324,13 @@ const CaseStudyPage = () => {
 						<img
 							className="screenshot"
 							id="multiple-screens"
-							src="../src/assets/images/w4m-onboarding/questionnaire.png"
+							src={questionnaire}
 							alt="WorksForMe Questionnaire"
 						/>
 						<img
 							className="screenshot"
 							id="multiple-screens"
-							src="../src/assets/images/w4m-onboarding/matches.png"
+							src={matches}
 							alt="WorksForMe Match Screen"
 						/>
 					</div>
