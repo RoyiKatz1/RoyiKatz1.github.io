@@ -7,10 +7,24 @@ a {
 	color: black !important;
 }
 
+a:hover {
+	color: var(--primary-purple) !important;
+	cursor: pointer;
+
+	img {
+		filter: invert(22%) sepia(98%) saturate(748%) hue-rotate(250deg);
+	}
+}
+
 .icon-link {
 	display: flex;
 	align-items: center;
 	gap: 4px;
+}
+
+.icon {
+	stroke: black;
+	stroke-width: 1.5;
 }
 
 .dropdown {
