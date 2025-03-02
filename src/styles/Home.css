@@ -53,3 +53,7 @@
 		gap: 16px;
 	}
 }
+
+button:active {
+	transform: scale(0.95);
+}
