@@ -1,6 +1,7 @@
 import CaseStudyHeader from "../components/caseStudy/CaseStudyHeader";
 import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
 import CaseStudySection from "../components/CaseStudySection";
+import ProgressBar from "../components/ProgressBar";
 
 const CaseStudyPage = () => {
 	const logoW4M = new URL("../assets/logos/logo-w4m.svg", import.meta.url)
@@ -23,6 +24,7 @@ const CaseStudyPage = () => {
 
 	return (
 		<div className="case-study-page">
+			<ProgressBar />
 			<CaseStudyHeader
 				title="Smarter Hiring Decisions with Data-Driven Matching"
 				logo={logoW4M}

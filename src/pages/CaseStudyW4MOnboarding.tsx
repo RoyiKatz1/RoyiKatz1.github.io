@@ -2,6 +2,7 @@ import CaseStudyHeader from "../components/caseStudy/CaseStudyHeader";
 import InsightBox from "../components/caseStudy/InsightBox/InsightBox";
 import CollapsibleSection from "../components/CollapsibleSection";
 import CaseStudySection from "../components/CaseStudySection";
+import ProgressBar from "../components/ProgressBar";
 
 const CaseStudyPage = () => {
 	const logoW4M = new URL("../assets/logos/logo-w4m.svg", import.meta.url)
@@ -44,6 +45,8 @@ const CaseStudyPage = () => {
 
 	return (
 		<div className="case-study-page">
+			<ProgressBar />
+
 			<CaseStudyHeader
 				title="Improving Engagement Through UX"
 				logo={logoW4M}
@@ -61,6 +64,7 @@ const CaseStudyPage = () => {
 				match presentation. The goal was to remove friction, boost
 				engagement, and increase job application success rates.
 			</p>
+
 			<CaseStudySection>
 				<section>
 					<div className="section-header">
