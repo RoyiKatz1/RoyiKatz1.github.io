@@ -7,10 +7,18 @@
 	width: 100%;
 	justify-content: stretch;
 	gap: 16px;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
 
 	button {
 		width: 100%;
 	}
+}
+
+.case-study-card-wrapper:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .case-study-card {
