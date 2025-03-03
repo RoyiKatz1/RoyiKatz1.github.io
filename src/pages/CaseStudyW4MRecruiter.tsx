@@ -28,7 +28,10 @@ const CaseStudyPage = () => {
 			<CaseStudyHeader
 				title="Smarter Hiring Decisions with Data-Driven Matching"
 				logo={logoW4M}
-				tags={["UX Design", "Product Strategy"]}
+				tags={[
+					{ text: "UX Design", category: "ux" },
+					{ text: "Product Strategy", category: "product" },
+				]}
 			/>
 			<p>
 				WorksForMe is a job-matching platform that helps recruiters find

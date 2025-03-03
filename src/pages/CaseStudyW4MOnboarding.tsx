@@ -50,7 +50,10 @@ const CaseStudyPage = () => {
 			<CaseStudyHeader
 				title="Improving Engagement Through UX"
 				logo={logoW4M}
-				tags={["UX Design", "Product Strategy"]}
+				tags={[
+					{ text: "UX Design", category: "ux" },
+					{ text: "Product Strategy", category: "product" },
+				]}
 			/>
 			<p>
 				WorksForMe is a real-world job-matching platform designed to
