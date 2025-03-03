@@ -2,11 +2,12 @@ import "./Tag.css";
 
 interface TagProps {
 	text: string;
+	category: string;
 }
 
-const Tag = ({ text }: TagProps) => {
+const Tag = ({ text, category }: TagProps) => {
 	return (
-		<div className="tag">
+		<div className={`tag ${category}`}>
 			<span>{text}</span>
 		</div>
 	);

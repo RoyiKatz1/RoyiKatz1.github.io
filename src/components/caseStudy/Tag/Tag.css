@@ -1,7 +1,18 @@
 .tag {
-	background-color: var(--w4m-blue);
 	padding: 4px 8px;
 	border-radius: 64px;
 	color: white;
 	font-size: 12px;
+}
+
+.ux {
+	background-color: var(--ux-purple-hard);
+}
+
+.product {
+	background-color: var(--product-blue-hard);
+}
+
+.data {
+	background-color: var(--data-green-hard);
 }

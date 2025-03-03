@@ -54,7 +54,10 @@ const Home = () => {
 					title="Improving Engagement Through UX"
 					description="WorksForMe simplifies job applications by automatically matching candidates to roles. By improving the application flow, we increased completion rates to 70%—reducing friction and keeping candidates engaged."
 					link="/case-study/worksforme-onboarding"
-					tags={["UX Design", "Product Strategy"]}
+					tags={[
+						{ text: "UX Design", category: "ux" },
+						{ text: "Product Strategy", category: "product" },
+					]}
 				/>
 				<CaseStudyCard
 					image={optimizationPreview}
@@ -62,7 +65,10 @@ const Home = () => {
 					title="Smarter Hiring Decisions with Data-Driven Matching"
 					description="WorksForMe helps recruiters quickly find the right candidates by automating job matching. We built a dynamic system that lets recruiters adjust hiring criteria in real-time—ensuring better matches with less effort."
 					link="/case-study/worksforme-recruiter"
-					tags={["UX Design", "Product Strategy"]}
+					tags={[
+						{ text: "UX Design", category: "ux" },
+						{ text: "Product Strategy", category: "product" },
+					]}
 				/>
 			</section>
 		</div>

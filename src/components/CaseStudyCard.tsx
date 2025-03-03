@@ -7,7 +7,7 @@ interface CaseStudyProps {
 	link: string;
 	logo?: string;
 	image: string;
-	tags: string[];
+	tags: { text: string; category: string }[];
 }
 
 const CaseStudyCard = ({
@@ -33,7 +33,7 @@ const CaseStudyCard = ({
 					<p>{description}</p>
 					<div className="tags">
 						{tags.map((tag) => (
-							<Tag text={tag} />
+							<Tag text={tag.text} category={tag.category} />
 						))}
 					</div>
 				</div>

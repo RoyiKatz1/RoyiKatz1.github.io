@@ -4,7 +4,7 @@ import "../../styles/CaseStudyPage.css";
 interface CaseStudyHeaderProps {
 	logo?: string;
 	title: string;
-	tags: string[];
+	tags: { text: string; category: string }[];
 }
 
 const CaseStudyHeader = ({ title, logo, tags }: CaseStudyHeaderProps) => {
@@ -14,7 +14,7 @@ const CaseStudyHeader = ({ title, logo, tags }: CaseStudyHeaderProps) => {
 			<h1>{title}</h1>
 			<div className="tags">
 				{tags.map((tag) => (
-					<Tag text={tag} />
+					<Tag text={tag.text} category={tag.category} />
 				))}
 			</div>
 		</div>

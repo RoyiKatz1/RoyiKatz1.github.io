@@ -29,8 +29,11 @@ a {
 	--primary-hover: #efe9ff;
 	--w4m-blue: #0077cc;
 	--ux-purple: rgba(230, 214, 255, 0.5);
+	--ux-purple-hard: #8c30f5;
 	--product-blue: rgba(90, 142, 225, 0.5);
+	--product-blue-hard: #0077cc;
 	--data-green: rgba(119, 178, 85, 0.5);
+	--data-green-hard: #4caf50;
 
 	--shadow-default: 0px 5px 25px rgba(0, 0, 0, 0.1);
 }
