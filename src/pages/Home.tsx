@@ -1,13 +1,40 @@
 import "../styles/Home.css";
+import { motion } from "framer-motion";
 import VennDiagram from "../components/VennDiagram/VennDiagram";
 import CaseStudyCard from "../components/CaseStudyCard";
 
-const Home = () => {
+const HeroSection: React.FC = () => {
 	const handleScroll = (id: string) => {
 		const target = document.getElementById(id);
 		target?.scrollIntoView({ behavior: "smooth" });
 	};
 
+	return (
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.6 }}
+		>
+			<div className="hero-text">
+				<div>
+					<h2>Hi!</h2>
+					<h1>
+						I’m <span className="highlight">Royi</span>
+					</h1>
+					<p>Helping Products Work for Users, Not Against Them.</p>
+				</div>
+				<button
+					id="see-my-work"
+					onClick={() => handleScroll("case-studies")}
+				>
+					See My Work
+				</button>
+			</div>
+		</motion.div>
+	);
+};
+
+const Home = () => {
 	const onboardingPreview = new URL(
 		"../assets/images/previewCards/onboarding-preview.png",
 		import.meta.url
@@ -23,23 +50,8 @@ const Home = () => {
 	return (
 		<div className="container">
 			<header className="hero">
-				<div className="hero-text">
-					<div>
-						<h2>Hi!</h2>
-						<h1>
-							I’m <span className="highlight">Royi</span>
-						</h1>
-						<p>
-							Helping Products Work for Users, Not Against Them.
-						</p>
-					</div>
-					<button
-						id="see-my-work"
-						onClick={() => handleScroll("case-studies")}
-					>
-						See My Work
-					</button>
-				</div>
+				<HeroSection />
+
 				<div className="venn-diagram-container">
 					<VennDiagram />
 				</div>
