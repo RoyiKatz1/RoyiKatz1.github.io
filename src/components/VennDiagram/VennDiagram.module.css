@@ -37,16 +37,3 @@
 	font-size: clamp(1rem, 2.5vw, 1.5rem);
 	font-weight: lighter;
 }
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-	.vennContainer {
-		width: 90vw;
-		max-width: none;
-	}
-	.circle {
-		width: clamp(25vw, 35vw, 150px);
-		height: clamp(25vw, 35vw, 150px);
-		font-size: clamp(0.8rem, 2vw, 1.2rem);
-	}
-}
