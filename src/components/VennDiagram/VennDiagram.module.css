@@ -37,3 +37,17 @@
 	font-size: clamp(1rem, 2.5vw, 1.5rem);
 	font-weight: lighter;
 }
+
+.ux {
+	top: 5%;
+	left: 35%;
+}
+.product {
+	top: 5%;
+	right: 35%;
+}
+.data {
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+}

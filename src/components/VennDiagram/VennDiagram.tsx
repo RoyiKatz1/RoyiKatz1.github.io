@@ -1,50 +1,69 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Circle from "./Circle";
 import styles from "./VennDiagram.module.css";
 
 const VennDiagram: React.FC = () => {
 	const [circleSize, setCircleSize] = useState(400);
+	const [animationComplete, setAnimationComplete] = useState(false);
 
-	// Dynamically adjust circle size based on screen width
+	// Responsive Circle Size
 	useEffect(() => {
 		const updateSize = () => {
-			const newSize = Math.min(window.innerWidth * 0.3, 400); // Responsive sizing
+			const newSize = Math.min(window.innerWidth * 0.35, 400);
 			setCircleSize(newSize);
 		};
-		updateSize(); // Call once initially
+		updateSize();
 		window.addEventListener("resize", updateSize);
 		return () => window.removeEventListener("resize", updateSize);
 	}, []);
 
-	const OFFSET = circleSize / 2;
+	const OFFSET = circleSize * 0.7; // Adjusted for spacing
+
+	// Animation Variants
+	const circleAnimation = {
+		initial: { scale: 1.3, x: 0, y: 0, opacity: 1 },
+		animate: (position: { x: number; y: number }) => ({
+			scale: 1,
+			x: position.x,
+			y: position.y,
+			transition: { duration: 1.5, ease: "easeInOut" },
+		}),
+	};
 
 	return (
-		<div
-			className={styles.vennContainer}
-			style={{
-				width: circleSize * 1.75,
-				height: circleSize * 1.375,
-			}}
-		>
+		<motion.div className={styles.vennContainer}>
+			{/* UX Circle */}
 			<Circle
 				color="var(--ux-purple)"
 				label="UX"
 				size={circleSize}
-				position={{ top: 0, left: OFFSET * 0.75 }}
+				position={{ x: 0, y: -OFFSET * 0.25 }}
+				variants={circleAnimation}
 			/>
+
+			{/* Product Circle */}
 			<Circle
 				color="var(--product-blue)"
 				label="Product"
 				size={circleSize}
-				position={{ top: OFFSET * 0.75, left: 0 }}
+				position={{ x: -OFFSET * 0.5, y: OFFSET * 0.25 }}
+				variants={circleAnimation}
 			/>
+
+			{/* Data Circle */}
 			<Circle
 				color="var(--data-green)"
 				label="Data"
 				size={circleSize}
-				position={{ top: OFFSET * 0.75, left: OFFSET * 1.5 }}
+				position={{ x: OFFSET * 0.5, y: OFFSET * 0.25 }}
+				variants={circleAnimation}
+				onAnimationComplete={() => {
+					console.log("Animation Complete Triggered!");
+					setAnimationComplete(true);
+				}}
 			/>
-		</div>
+		</motion.div>
 	);
 };
 

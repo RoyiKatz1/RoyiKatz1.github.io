@@ -1,33 +1,58 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./VennDiagram.module.css";
 
 interface CircleProps {
 	color: string;
 	label: string;
 	size?: number;
-	position: { top: number; left: number };
+	position: { x: number; y: number };
+	variants: any;
+	onAnimationComplete?: () => void;
 }
 
-// const skillsMapping = {
-// 	UX: ["UX Research", "Wireframing & Prototyping", "Interaction Design"],
-// 	Product: ["Product Strategy", "User Story Writing", "Agile Development"],
-// 	Data: ["Data Analysis", "Web Scraping", "Business Intelligence"],
-// };
+const Circle: React.FC<CircleProps> = ({
+	color,
+	label,
+	size,
+	position,
+	variants,
+	onAnimationComplete,
+}) => {
+	// Label Animation
+	const labelAnimation = {
+		initial: { opacity: 0, y: 10 },
+		animate: {
+			opacity: 1,
+			y: 0,
+			transition: { delay: 1.6, duration: 0.5, ease: "easeOut" },
+		},
+	};
 
-const Circle: React.FC<CircleProps> = ({ color, label, size, position }) => {
 	return (
-		<div
+		<motion.div
 			className={label === "UX" ? styles.circle : styles.circleBottom}
 			style={{
 				backgroundColor: color,
 				width: size,
 				height: size,
-				top: position.top,
-				left: position.left,
 			}}
+			variants={variants}
+			initial="initial"
+			animate="animate"
+			custom={position}
+			onAnimationComplete={onAnimationComplete}
 		>
-			<span className={styles.label}>{label}</span>
-		</div>
+			{/* Label inside the circle */}
+			<motion.span
+				className={styles.label}
+				variants={labelAnimation}
+				initial="initial"
+				animate="animate"
+			>
+				{label}
+			</motion.span>
+		</motion.div>
 	);
 };
 
