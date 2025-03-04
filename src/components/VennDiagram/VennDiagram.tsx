@@ -5,7 +5,6 @@ import styles from "./VennDiagram.module.css";
 
 const VennDiagram: React.FC = () => {
 	const [circleSize, setCircleSize] = useState(400);
-	const [animationComplete, setAnimationComplete] = useState(false);
 
 	// Responsive Circle Size
 	useEffect(() => {
@@ -60,7 +59,6 @@ const VennDiagram: React.FC = () => {
 				variants={circleAnimation}
 				onAnimationComplete={() => {
 					console.log("Animation Complete Triggered!");
-					setAnimationComplete(true);
 				}}
 			/>
 		</motion.div>
