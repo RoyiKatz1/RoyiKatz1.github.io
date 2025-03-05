@@ -14,7 +14,7 @@ body {
 	padding: clamp(32px, 5vw, 128px);
 
 	/* Set max width for better readability */
-	max-width: 1440px;
+	/* max-width: 1800px; */
 	margin: 0 auto;
 }
 

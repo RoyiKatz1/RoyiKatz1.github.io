@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
 					<h1>
 						I’m <span className="highlight">Royi</span>
 					</h1>
-					<p>Helping Products Work for Users, Not Against Them.</p>
+					<p>I Help Products Work for Users, Not Against Them.</p>
 				</div>
 				<button
 					id="see-my-work"
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
 
 const Home = () => {
 	const onboardingPreview = new URL(
-		"../assets/images/previewCards/onboarding-preview.png",
+		"../assets/images/previewCards/onboarding-preview-mock-up.png",
 		import.meta.url
 	).href;
 	const optimizationPreview = new URL(
@@ -61,10 +61,11 @@ const Home = () => {
 
 			<section className="case-studies" id="case-studies">
 				<CaseStudyCard
+					key={1}
 					image={onboardingPreview}
 					logo={logoW4M}
-					title="Improving Engagement Through UX"
-					description="WorksForMe simplifies job applications by automatically matching candidates to roles. By improving the application flow, we increased completion rates to 70%—reducing friction and keeping candidates engaged."
+					title="How UX Fixes Increased Completion Rates to 70%"
+					description="We reimagined WorksForMe’s application flow to keep candidates engaged."
 					link="/case-study/worksforme-onboarding"
 					tags={[
 						{ text: "UX Design", category: "ux" },
@@ -72,10 +73,11 @@ const Home = () => {
 					]}
 				/>
 				<CaseStudyCard
+					key={2}
 					image={optimizationPreview}
 					logo={logoW4M}
-					title="Smarter Hiring Decisions with Data-Driven Matching"
-					description="WorksForMe helps recruiters quickly find the right candidates by automating job matching. We built a dynamic system that lets recruiters adjust hiring criteria in real-time—ensuring better matches with less effort."
+					title="Data-Driven Matching: Smarter, Faster Hiring"
+					description="We transformed a data-heavy hiring process into an intuitive system—helping recruiters adjust multiple parameters in real-time to make smarter, faster decisions with confidence."
 					link="/case-study/worksforme-recruiter"
 					tags={[
 						{ text: "UX Design", category: "ux" },
