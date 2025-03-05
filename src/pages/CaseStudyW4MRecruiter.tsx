@@ -26,7 +26,7 @@ const CaseStudyPage = () => {
 		<div className="case-study-page">
 			<ProgressBar />
 			<CaseStudyHeader
-				title="Smarter Hiring Decisions with Data-Driven Matching"
+				title="Data-Driven Matching: Smarter, Faster Hiring"
 				logo={logoW4M}
 				tags={[
 					{ text: "UX Design", category: "ux" },

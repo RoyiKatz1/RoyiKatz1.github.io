@@ -48,7 +48,7 @@ const CaseStudyPage = () => {
 			<ProgressBar />
 
 			<CaseStudyHeader
-				title="Improving Engagement Through UX"
+				title="How UX Fixes Increased Completion Rates to 70%"
 				logo={logoW4M}
 				tags={[
 					{ text: "UX Design", category: "ux" },
