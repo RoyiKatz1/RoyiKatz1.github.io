@@ -31,7 +31,12 @@ const VennDiagram: React.FC = () => {
 	};
 
 	return (
-		<motion.div className={styles.vennContainer}>
+		<motion.div
+			className={styles.vennContainer}
+			initial={{ rotate: 180 }}
+			animate={{ rotate: 360 }}
+			transition={{ duration: 1.5 }}
+		>
 			{/* UX Circle */}
 			<Circle
 				color="var(--ux-purple)"
