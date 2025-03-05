@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
-import DownloadIcon from "../assets/icons/Download.svg";
+// import DownloadIcon from "../assets/icons/Download.svg";
 import mailIcon from "../assets/icons/Mail.svg";
 import linkedinIcon from "../assets/icons/Linkedin.svg";
 
@@ -14,14 +14,14 @@ const Navbar = () => {
 	return (
 		<nav className="navbar">
 			<a href="/">Home</a>
-			<a
+			{/* <a
 				className="icon-link"
 				href="/royi-katz-cv.pdf"
 				download="royi-katz-cv.pdf"
 			>
 				<img src={DownloadIcon} alt="Download" width={16} height={16} />
 				Resume
-			</a>
+			</a> */}
 			<div
 				className="dropdown"
 				onMouseEnter={() => setIsDropdownOpen(true)}
